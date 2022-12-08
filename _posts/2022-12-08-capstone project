@@ -1,0 +1,21 @@
+---
+layout: post
+title: capstone project
+author: [chanhank]
+category: [Lecture]
+tags: [jekyll, ai]
+---
+
+期末專題實作:
+
+---
+##標題
+###系統方塊圖
+
+---
+
+<br>
+<br>
+
+*This site was last updated {{ site.time | date: "%B %d, %Y" }}.*
+
