@@ -11,7 +11,7 @@ tags: [jekyll, ai]
 ## Mediapipe姿態辨識
 MediaPipe 是 Google Research 所開發的多媒體機器學習模型應用框架，支援 JavaScript、Python、C++ 等程式語言，可以運行在嵌入式平臺 ( 例如樹莓派等 )、移動設備 ( iOS 或 Android ) 或後端伺服器，目前如 YouTube、Google Lens、Google Home 和 Nest...等，都已和 MediaPipe 深度整合。<br>
 Mediapipe Pose 模型可以標記出身體共 33 個姿勢節點的位置，甚至可以進一步透過這些節點，將人物與背景分離，做到去背的效果，下圖標示出每個節點的順序和位置 <br>
-![](https://github.com/JULIA1021/AI-course/blob/gh-pages/images/4.jpg)?raw==true)
+
 ### 如果使用 Python 語言進行開發，MediaPipe 支援下列幾種辨識功能：
 * **MediaPipe Face Detection ( 人臉追蹤 )**<br>
 * **MediaPipe Face Mesh ( 人臉網格 )**<br>
