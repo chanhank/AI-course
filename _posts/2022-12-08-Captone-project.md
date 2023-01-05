@@ -28,10 +28,18 @@ tags: [jekyll, ai]
 1.開啟鏡頭<br>
 2.使全身進入畫面<br>
 3.將自己的左腳抬起並使膝蓋高於90度<br>
+
+```
+
+13
+45
+46
+```
 ### 測試結果
 ![](https://github.com/JULIA1021/AI-course/blob/gh-pages/images/1.jpg?raw==true)
 
-<iframe width=854 height=480  src="https://github.com/chanhank/AI-course/blob/gh-pages/images/sport.mp4" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen onload="onYouTubeIframeAPIReady()"></iframe>
+<iframe width="560" height="315" src="https://youtube.com/embed/NbBt8I_7Q9k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
 <br />
 <br />
