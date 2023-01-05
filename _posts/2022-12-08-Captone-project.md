@@ -6,16 +6,16 @@ category: [Lecture]
 tags: [jekyll, ai]
 ---
 
-期末專題實作: Virtual Try-On (試穿衣服)
+期末專題實作: Mediapipe姿態辨識
 
 ---
-## Virty Try-On (試穿衣服)
+## Mediapipe姿態辨識
 
 ### 系統簡介及功能說明
 
-1. **系統簡介**:
+1. **系統簡介**:利用Mediapipe進行姿態辨識
 
-2. **功能說明**:
+2. **功能說明**:利用mediapipe節點偵測左腳所夾角度，計算出角度改變超過議定角度的次數
 
 ---
 ### 系統方塊圖
