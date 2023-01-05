@@ -29,6 +29,7 @@ tags: [jekyll, ai]
 2.使全身進入畫面<br>
 3.將自己的左腳抬起並使膝蓋高於90度<br>
 
+## 程式碼
 ```
 import cv2
 import mediapipe as mp
