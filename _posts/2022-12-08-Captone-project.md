@@ -8,8 +8,20 @@ tags: [jekyll, ai]
 
 期末專題
 
----
 ## Mediapipe姿態辨識
+MediaPipe 是 Google Research 所開發的多媒體機器學習模型應用框架，支援 JavaScript、Python、C++ 等程式語言，可以運行在嵌入式平臺 ( 例如樹莓派等 )、移動設備 ( iOS 或 Android ) 或後端伺服器，目前如 YouTube、Google Lens、Google Home 和 Nest...等，都已和 MediaPipe 深度整合。<br>
+Mediapipe Pose 模型可以標記出身體共 33 個姿勢節點的位置，甚至可以進一步透過這些節點，將人物與背景分離，做到去背的效果，下圖標示出每個節點的順序和位置 <br>
+![](https://github.com/JULIA1021/AI-course/blob/gh-pages/images/4.jpg)?raw==true)
+### 如果使用 Python 語言進行開發，MediaPipe 支援下列幾種辨識功能：
+* **MediaPipe Face Detection ( 人臉追蹤 )**<br>
+* **MediaPipe Face Mesh ( 人臉網格 )**<br>
+* **MediaPipe Hands ( 手掌偵測 )**<br>
+* **MediaPipe Holistic ( 全身偵測 )**<br>
+* **MediaPipe Pose ( 姿勢偵測 )**<br>
+* **MediaPipe Objectron ( 物體偵測 )**<br>
+* **MediaPipe Selfie Segmentation ( 人物去背 )**<br>
+---
+---
 
 ## 系統簡介及功能說明
 系統簡介:角度的應用   <br>
@@ -85,11 +97,11 @@ with mp_selfie_segmentation.SelfieSegmentation(model_selection=0) as selfie_segm
       imgH,imgW=image.shape[0],image.shape[1]
       #image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
       results = pose.process(image) #偵測身體
-      #左手軸3點->11,13,15
+      #左腳軸3點->23,25,27
       if (not results.pose_landmarks==None): #至少有一個身體
-        a=np.array([results.pose_landmarks.landmark[23].x*imgW,results.pose_landmarks.landmark[11].y*imgH])
-        b=np.array([results.pose_landmarks.landmark[25].x*imgW,results.pose_landmarks.landmark[13].y*imgH])
-        c=np.array([results.pose_landmarks.landmark[27].x*imgW,results.pose_landmarks.landmark[15].y*imgH])
+        a=np.array([results.pose_landmarks.landmark[23].x*imgW,results.pose_landmarks.landmark[23].y*imgH])
+        b=np.array([results.pose_landmarks.landmark[25].x*imgW,results.pose_landmarks.landmark[25].y*imgH])
+        c=np.array([results.pose_landmarks.landmark[27].x*imgW,results.pose_landmarks.landmark[27].y*imgH])
         #算出角度
         HandAngle=FindAngleF(a,b,c)
         #print(HandAngle)
