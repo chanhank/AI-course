@@ -31,8 +31,7 @@ tags: [jekyll, ai]
 ### 測試結果
 ![](https://github.com/JULIA1021/AI-course/blob/gh-pages/images/1.jpg?raw==true)
 
-<iframe width="960" height="540" src="https://youtube.com/shorts/NbBt8I_7Q9k?feature=share" title="Mediapipe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<iframe width=854 height=480  src="https://github.com/chanhank/AI-course/blob/gh-pages/images/sport.mp4?enablejsapi=1" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen onload="onYouTubeIframeAPIReady()"></iframe>
 
 <br />
 <br />
