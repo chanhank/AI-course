@@ -190,9 +190,9 @@ with mp_selfie_segmentation.SelfieSegmentation(model_selection=0) as selfie_segm
 
         if countEx > 10:
             countEx=10
-       ```
-       **定義和顯示出介面**
-       ```
+```
+**定義和顯示出介面**
+```
         #畫出點位
         mp_drawing.draw_landmarks(
             image,
