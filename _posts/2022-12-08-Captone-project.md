@@ -42,9 +42,8 @@ Mediapipe Pose 模型可以標記出身體共 33 個姿勢節點的位置，甚�
 3.將自己的左腳抬起並使膝蓋高於90度<br>
 
 ## 程式碼
-
-```
-## 基本設置與角度計算函數
+**基本設置與角度計算函數**
+``` 
 import cv2
 import mediapipe as mp
 import numpy as np
@@ -128,8 +127,8 @@ def countExF3(Angel):
     countEx3=0
   return countEx3
 ```
-```
-## 
+**定義所需的mediapipe身體標點**
+``` 
 # For webcam input:
 cap = cv2.VideoCapture(0)
 with mp_selfie_segmentation.SelfieSegmentation(model_selection=0) as selfie_segmentation:
@@ -170,7 +169,9 @@ with mp_selfie_segmentation.SelfieSegmentation(model_selection=0) as selfie_segm
         l=np.array([results.pose_landmarks.landmark[28].x*imgW,results.pose_landmarks.landmark[28].y*imgH])
 
         Angle=FindAngleF(j,k,l) #算出角度
-    
+    ```
+    **計算動作執行次數**
+    ```
         #算出次數
         
         
@@ -189,7 +190,9 @@ with mp_selfie_segmentation.SelfieSegmentation(model_selection=0) as selfie_segm
 
         if countEx > 10:
             countEx=10
-       
+       ```
+       **定義和顯示出介面**
+       ```
         #畫出點位
         mp_drawing.draw_landmarks(
             image,
