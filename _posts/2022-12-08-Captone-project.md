@@ -169,9 +169,9 @@ with mp_selfie_segmentation.SelfieSegmentation(model_selection=0) as selfie_segm
         l=np.array([results.pose_landmarks.landmark[28].x*imgW,results.pose_landmarks.landmark[28].y*imgH])
 
         Angle=FindAngleF(j,k,l) #算出角度
-    ```
-    **計算動作執行次數**
-    ```
+```
+**計算動作執行次數**
+```
         #算出次數
         
         
