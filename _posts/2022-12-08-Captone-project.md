@@ -42,6 +42,7 @@ Mediapipe Pose 模型可以標記出身體共 33 個姿勢節點的位置，甚�
 3.將自己的左腳抬起並使膝蓋高於90度<br>
 
 ## 程式碼
+##
 ```
 import cv2
 import mediapipe as mp
