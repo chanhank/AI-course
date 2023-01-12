@@ -21,29 +21,38 @@ Mediapipe Pose 模型可以標記出身體共 33 個姿勢節點的位置，甚�
 * **MediaPipe Objectron ( 物體偵測 )**<br>
 * **MediaPipe Selfie Segmentation ( 人物去背 )**<br>
 ---
+
 ---
+## Mediapipe姿態辨識
 
 ## 系統簡介及功能說明
-系統簡介:角度的應用   <br>
+
+系統簡介:本實驗是姿態辨試角度的應用   <br>
+
 功能說明:利用mediapipe節點偵測左腳所夾角度，來計算出角度改變的次數   <br>
 ![](https://github.com/JULIA1021/AI-course/blob/gh-pages/images/2.jpg?raw==true)
 ---
 ### 系統方塊圖
-![](https://github.com/JULIA1021/AI-course/blob/gh-pages/images/3.jpg?raw==true)
+![](https://github.com/JULIA1021/AI-course/blob/gh-pages/images/7.jpg?raw==true)
 ---
 ### 製作步驟
 1參考mediapipe 函式<br>
 2在git bash使用opencv結合mediapipe<br>
 
 
-**專題實作步驟**
+**專題實作步驟** <br>
 1.開啟鏡頭<br>
 2.使全身進入畫面<br>
-3.將自己的左腳抬起並使膝蓋高於90度<br>
+3.將自己的右手抬起並高於肩膀<br>
+4.將自己的左手肘彎舉<br>
+5.將自己的左腳抬起並高於肩膀<br>
+6.完全蹲下<br>
+7.3~6依序執行十次後程式關閉<br>
 
 ## 程式碼
+
 **基本設置與角度計算函數**
-``` 
+```
 import cv2
 import mediapipe as mp
 import numpy as np
@@ -128,7 +137,7 @@ def countExF3(Angel):
   return countEx3
 ```
 **定義所需的mediapipe身體標點**
-``` 
+```
 # For webcam input:
 cap = cv2.VideoCapture(0)
 with mp_selfie_segmentation.SelfieSegmentation(model_selection=0) as selfie_segmentation:
@@ -169,7 +178,7 @@ with mp_selfie_segmentation.SelfieSegmentation(model_selection=0) as selfie_segm
         l=np.array([results.pose_landmarks.landmark[28].x*imgW,results.pose_landmarks.landmark[28].y*imgH])
 
         Angle=FindAngleF(j,k,l) #算出角度
-```
+```        
 **計算動作執行次數**
 ```
         #算出次數
@@ -262,9 +271,12 @@ with mp_selfie_segmentation.SelfieSegmentation(model_selection=0) as selfie_segm
 
 cap.release()
 ```
-### 測試結果
-![](https://github.com/JULIA1021/AI-course/blob/gh-pages/images/1.jpg?raw==true)
 
+### 測試結果
+![](https://github.com/JULIA1021/AI-course/blob/gh-pages/images/6.jpg?raw==true)
+<br>
+
+### 參考影片
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TTE3SjYuing" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
